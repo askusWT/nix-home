@@ -11,7 +11,6 @@ If you would like to base your own configuration from this repository, you will 
 **Highlights**:
 
 - Flexible **roles** such as **workstation**, **server**, **kiosk**
-- Deployment of secrets using **sops-nix**
 - Highly configured desktop environments for **i3** **sway** and **hyprland**
 - Some interesting **bash scripts** for automating common tasks.
 - **Declarative** **themes** and **wallpapers** with **nix-colors**
@@ -28,11 +27,6 @@ If you would like to base your own configuration from this repository, you will 
     - `common`: Shared configurations consumed by all users.
       - `role`: Files related to what "role" is being selected as a template
       - `secrets`: Secrets that are available to all users
-    - `generic`: The 'generic' org to allow for isolation of configurations, secrets and config from various clients
-    - `toi`: The 'toi' org to allow for isolation of configurations, secrets and config from various clients
-      - `secrets`: Secrets that are specific to the 'toi' org
-      - `<hostname>`: Optional subfolder to load more configuration files based on the home-manager profiles name
-      - `<role>`: Optional subfolder to load more configuration files based on the roles name
       - `<users>`: Load some specific user profile information
     - `sd`: Similar to the above org, just another org for isolation
     - `sr`: Similar to the above org, just another org for isolation
@@ -72,10 +66,6 @@ home-manager switch --flake .#${HOSTNAME}.${USERNAME} --extra-experimental-featu
 ```
 nix flake update .
 ```
-
-### Managing Secrets
-
-I took some notes and documented the process of getting encrypted secrets created and keeping up to date on my website. [Tired of IT! Secrets Management](https://notes.tiredofit.ca/books/linux/page/secrets-management).
 
 # License
 
