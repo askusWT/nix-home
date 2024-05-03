@@ -6,6 +6,7 @@ let
 in
 {
   imports = [
+    ./pkgs.nix
     ./common
   ] ++ existing-imports [
     ./${org}
