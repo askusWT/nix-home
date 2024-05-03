@@ -1,3 +1,5 @@
+Blatantly stolen this excellent nix template from [home](https://github.com/tiredofit/home). You should seek inspriation there rather than in my fumbled changes  
+
 #  🏠 $HOME 🏠
 
 Here are my standalone [home-manager](https://nix-community.github.io/home-manager/) configuration files that are used on my NixOS systems and also other linux distribution systems.
